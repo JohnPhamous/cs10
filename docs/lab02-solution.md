@@ -79,6 +79,31 @@ Example:
 > Enter a 5-character word: <u>**hElLo**</u><br>
 > Your word is Hello.
 
+```
+#include <iostream>
+#include <string>
+#include <locale>
+
+using namespace std;
+
+int main() {
+    cout << "Enter a 5 character string: ";
+
+    string userInput;
+    cin >> userInput;
+
+    userInput.at(0) = toupper(userInput.at(0));
+
+    for (int i = 1; i < userInput.size(); i++) {
+        userInput.at(i) = tolower(userInput.at(i));
+    }
+
+    cout << userInput << endl;
+    
+    return 0;
+}
+
+```
 
 Exercise 4
 ---
